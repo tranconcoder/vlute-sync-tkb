@@ -7,7 +7,12 @@ services:
   vlute-sync-tkb-api:
     build: 
       context: ./backend
+      dockerfile: Dockerfile.dev
     container_name: vlute-sync-tkb-api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/app
     environment:
       - REDIS_URL=${REDIS_URL:-redis://redis-server:6379/0}
     depends_on:

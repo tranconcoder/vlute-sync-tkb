@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run start.sh",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "-e",
+        "console.log('Script finished')"
+      ],
+      "preLaunchTask": "Run start script",
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}
