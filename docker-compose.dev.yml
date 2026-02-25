@@ -28,7 +28,7 @@ services:
       - vlute-sync-tkb-api
 
   vlute-sync-tkb-api:
-    build: 
+    build:
       context: ./backend
       dockerfile: Dockerfile.dev
     container_name: vlute-sync-tkb-api
