@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = git@gitlab.trancondev.site:vlute-sync-tkb/vlute-sync-tkb-api.git
+[submodule "frontend"]
+	path = frontend
+	url = git@gitlab.trancondev.site:vlute-sync-tkb/vlute-sync-tkb-ui.git
