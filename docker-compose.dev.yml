@@ -11,6 +11,22 @@ services:
     environment:
       MONGO_INITDB_DATABASE: vlute-sync
 
+  vlute-sync-tkb-ui:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    container_name: vlute-sync-tkb-ui
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - vlute-sync-tkb-api
+
   vlute-sync-tkb-api:
     build: 
       context: ./backend
