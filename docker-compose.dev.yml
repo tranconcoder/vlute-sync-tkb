@@ -1,0 +1,14 @@
+services:
+  redis-server:
+    image: redis:alpine
+    container_name: vlute-sync-redis
+    restart: always
+
+  vlute-sync-tkb-api:
+    build: 
+      context: ./backend
+    container_name: vlute-sync-tkb-api
+    environment:
+      - REDIS_URL=${REDIS_URL:-redis://redis-server:6379/0}
+    depends_on:
+      - redis-server
